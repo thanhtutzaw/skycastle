@@ -1,0 +1,9 @@
+.nav-link{
+    padding: 1rem;
+    font-size:1rem;
+    transition:all .7s ease-in-out;
+}
+.nav-link:hover{
+    font-size:1.2rem;
+    transition: all .3s ease-in-out;
+}
