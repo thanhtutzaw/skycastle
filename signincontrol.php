@@ -1,3 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+<body>
+    
+</body>
+</html>
+
 <?php 
 
 $admin_email = "admin";
@@ -15,24 +33,28 @@ $inputpass = $_POST['pass'];
       
         if(isset($_POST['submit'])){
             if($inputemail == $admin_email && $inputpass == $admin_pass){
-               echo "<script> alert('Admin Login success') ;</script>"; 
-               header('Location:admin_dash.php');
+                // echo "<script> alert('Teacher Login success') ;</script>"; 
+            //    echo "<script> alert('Admin Login success') ;</script>"; 
+               header('Location:admin_dash.html');
             }
             else if($inputemail == $teacher_email && $inputpass == $teacher_pass) {
-                echo "<script> alert('Teacher Login success') ;</script>"; 
-                header('Location:teacher_dash.php');
+                // echo "<script> alert('Teacher Login success') ;</script>"; 
+                header('Location:teacher_dash.html');
                 
             }
             else if($inputemail == $student_email && $inputpass == $student_pass) {
-                echo "<script> alert('Student Login success') ;</script>"; 
-                header('Location:student_dash.php');
+                // echo "<script> alert('Student Login success') ;</script>"; 
+                header('Location:student_dash.html');
                 
             }
             else{
-                echo "<script> alert('Login Error !') ;</script>"; 
+                echo "<script> Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Log in fail!'
+                  });</script>";
+                // echo "<script> alert('Login Error !') ;</script>"; 
                 echo "<a href='signin.php'>Try Again</a>"; 
-                // header('Location:signin.php');
-
             }
         }
  

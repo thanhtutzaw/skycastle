@@ -1,3 +1,7 @@
+<?php
+    $_POST['email'] = "";
+    $_POST['pass'] = "";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container bg-success">
+  <div class="container bg-primary ">
     <table class="table table-bordered">
       <tbody>
         <tr>
@@ -30,19 +34,19 @@
         </tr>
       </tbody>
     </table>
-    <h2 class="text-primary text-center mt-3 mb-5">Sign In</h2>
+    <h2 class="text-light text-center mt-3 mb-5">Sign In</h2>
       <div class="row mt-5">
-        <div class="text-center text-primary col-md-6">Image or something</div>
+        <div class="text-center text-light col-md-6">Image or something</div>
         <div class="bg-warning rounded py-5 px-5 col-md-6">
                 <form action="signincontrol.php"method="post">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input name="email" required type="text" class="w-50 form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input value="<?php echo$_POST['email'];?>"  name="email" required type="text" class="w-50 form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input name="pass" required type="password" class="w-50 form-control" id="exampleInputPassword1">
+                  <input value="<?php echo$_POST['pass'];?>"  name="pass" required type="password" class="w-50 form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -56,16 +60,6 @@
        
 
 
-    <!-- <form action="signin.php"method="post">
-
-    <h1 class="mb-3 text-primary text-center">Sign In</h1>
-    <input name="input1" type="text" class="mb-3 form-control">
-    <input name="input2" type="text" class="mb-3 form-control">
-    <input name="input3" type="text" class="mb-3 form-control">
-    <button type="submit" name="submit" class="btn btn-success mb-3 ">Continue</button>
-    
-
-  </form> -->
   </div>
 
    
