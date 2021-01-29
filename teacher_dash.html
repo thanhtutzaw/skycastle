@@ -1,28 +1,62 @@
-<!-- <?php 
-        echo "<script> alert('Teacher Login success') ;</script>"; 
-
- 
-
-?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Teacher Dashboard</title>
+	<link rel="stylesheet" href="library/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="library/fontawesome/fontawesome-all.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shourtcut icon" href="images/teacher.jpg">
 </head>
 <body>
-    <h1 class="text-success">Teacher Dashboard</h1>
+	<!-- sidebar section -->
+		<nav class="navbar navbar-expand-lg navbar-light">
+		  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
 
+		  <div class="collapse navbar-collapse" id="myNavbar">
+		    <div class="container-fluid">
+		    	<div class="row">
+		    		<div class="col-xl-2 col-lg-3 sidebar fixed-top">
+		    			<div class="teacher-info border-bottom py-3">
+		    				<img src="images/teacher.jpg" alt="" width="60" class="rounded-circle mr-3">
+		    				<a href="#" class="text-dark mr-3 font-me font-size-30">Teacher</a>
+		    			</div>
+		    			<ul class="navbar-nav flex-column font-no">
+		    				<li class="nav-item my-2"><a href="#" class="nav-link text-dark current"><i class="fas fa-home mr-4 "></i>Home</a></li>
+		    				<li class="nav-item my-2"><a href="Title.html" class="nav-link text-dark sidebar-link"><i class="fas fa-user text-dark fa-lg mr-4"></i>Create Course</a></li>
+		    				<li class="nav-item my-2"><a href="Inbox.html" class="nav-link text-dark sidebar-link"><i class="fas fa-envelope text-dark fa-lg mr-4"></i>Inbox</a></li>
+		    				<li class="nav-item my-2"><a href="My_lectures.html" class="nav-link text-dark sidebar-link"><i class="fas fa-school text-dark fa-lg mr-3"></i>My lectures</a></li>
+		    				<li class="nav-item my-2"><a href="Assignment.html" class="nav-link text-dark sidebar-link"><i class="fas fa-book fa-lg mr-3"></i> Assignment</a></li>
+		    				<li class="nav-item my-2"><a href="Online_Test.html" class="nav-link text-dark sidebar-link"><i class="fas fa-file-alt text-dark fa-lg mr-4"></i>Online Test</a></li>
+		    				<li class="nav-item my-2"><a href="Notes.html" class="nav-link text-dark sidebar-link"><i class="fas fa-pencil-alt text-dark fa-lg mr-4"></i>Notes</a></li>
+		    				<li class="nav-item my-2"><a href="logout.html" class="nav-link text-dark sidebar-link"><i class="fas fa-sign-out-alt text-dark fa-lg mr-3"></i>Logout</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="col-xl-10 col-lg-9 bg-white fixed-top ml-auto top-navbar">
+		    			<div class="row">
+		    				<div class="col-md-6 py-3">
+		    					<form>
+		    						<div class="input-group">
+		    							<input type="search" class="form-control search-input mr-3" placeholder="Search...">
+		    							<button class="btn search-button"><i class="fas fa-search text-secondary"></i></button>
+		    						</div>
+		    					</form>
+		    				</div>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		</nav>
 
-
-
-
-    
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<script src="library/bootstrap/jquery-3.4.1.slim.min.js"></script>
+	<script src="library/bootstrap/popper.min.js"></script>
+	<script src="library/bootstrap/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
