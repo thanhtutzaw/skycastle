@@ -35,7 +35,7 @@ $inputpass = $_POST['pass'];
             if($inputemail == $admin_email && $inputpass == $admin_pass){
                 // echo "<script> alert('Teacher Login success') ;</script>"; 
             //    echo "<script> alert('Admin Login success') ;</script>"; 
-               header('Location:admin_dash.html');
+               header('Location:admin_dash.php');
             }
             else if($inputemail == $teacher_email && $inputpass == $teacher_pass) {
                 // echo "<script> alert('Teacher Login success') ;</script>"; 
