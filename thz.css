@@ -15,13 +15,26 @@
     transition: all .3s ease-in-out; */
     
 }
-body{
+.navbar-nav .nav-item{
+		letter-spacing:2px;
+}
+.icon{
+	pointer-events: none;
+	transition: all .2s ease-in-out;
+	transform: rotate3d(1, -1, 1, 0deg);
+}
+.navbar:hover .icon{
+	transition: all .2s ease-in-out;
+	transform: rotate3d(1, -1, 1, 47deg);
+}
+/* body{
+	
 	font-family: 'Montserrat', sans-serif;
 	background-color: white;
-}
+} */
 
 /*navbar section*/
-.sidebar{
+/* .sidebar{
 	background-color: skyblue;
 	height: 100vh;
 	background-size: cover;
@@ -80,4 +93,4 @@ body{
 .search-button:hover{
 	background: #eee;
 	transform: translateY(-1px);
-}
+} */
