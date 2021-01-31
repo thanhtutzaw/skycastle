@@ -1,3 +1,8 @@
+<?php
+        require_once 'db.php';
+
+		    $con = createDB();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,8 +37,9 @@
 
 
         </div>
-        <div class="col-md-6 bg-light rounded py-5 px-5 " style="    box-shadow: 0px 0px 20px 0px #676767;">
-                <form action="signup.html"method="post">
+        <div class="col-md-6 bg-light rounded py-5 px-5 " style="box-shadow: 0px 0px 20px 0px #676767;">
+        
+                <form action="admin_dash.php"method="post">
                   <div class="row">
                     <div class="col-6">
                       <div class="mb-3">
@@ -48,8 +54,8 @@
                     
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input placeholder="Email" name="text" required type="text" class=" form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                      <input placeholder="Email" name="email" required type="text" class=" form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      
                     </div>
                     <div class="mb-3">
                       <label for="" class="form-label">Phone</label>
@@ -58,7 +64,7 @@
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Address</label>
                       <input placeholder="Address" name="address" required type="text" class=" form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                      
                     </div>
                     
                     <!-- <div class="mb-3 form-check">
@@ -69,7 +75,7 @@
                     <div class="col-6"><div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Name</label>
                       <input placeholder="Name" name="name" required type="text" class=" form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                      
                     </div>
 
                     <div class="mb-3">

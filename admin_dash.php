@@ -1,4 +1,10 @@
+<?php 
+        if(isset($_POST['submit'])){
+            $name = $_POST['name'];
 
+           echo "<script>alert('echo $name;');</script>";
+        }
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +98,7 @@
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">1</th>
-                                                    <td>Teacher</td>
+                                                    <td><?php echo $name; ?></td>
                                                     <td>2222</td>
                                                     
                                                     <td><?php trashicon(); ?></td>
@@ -158,6 +164,7 @@
 
     
     <!-- bootstrap -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>

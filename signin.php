@@ -53,7 +53,7 @@
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                <a href="register.html" class="text-muted" style="text-decoration: none;">Creat Account</a>
+                <a href="signup.php" class="text-muted" style="text-decoration: none;">Creat Account</a>
               </form>
         </div>
       </div>
