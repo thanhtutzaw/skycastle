@@ -1,7 +1,89 @@
 <?php
         require_once 'db.php';
 
-		    $con = createDB();
+        $con = createDB();
+        
+       
+        if(isset($_POST['submit'])){
+            createData(); 
+        }
+
+        function createData(){
+            $role = checkinput('role');
+            $name = checkinput('name');
+            $email = checkinput('email');
+            $pass = checkinput('pass');
+
+          if($role && $name && $email && $pass ){
+            $sql = "
+            insert into scuser(role,name,email,pass)
+            values('$role','$name','$email','$pass')
+            
+            ";
+
+            if(mysqli_query($GLOBALS['con'],$sql) ){
+              
+                echo "<script>alert('Registration Success!');</script>";
+                if($role == "teacher"){
+                  echo "<script>alert('Choosed Teacher');</script>";
+                  header('Location:teacher_dash 111.html');
+                }
+                else{
+                  echo "<script>alert('Choosed Student');</script>";
+                  header('Location:student_dash.html');
+                  
+                }
+
+            }
+            else{
+              echo "<script>alert('Insert error!');</script>";
+
+            }
+            // else (mysqli_query($GLOBALS['con'],$sql) && $role = "student"){
+            //     echo "<script>alert('Student Registration Success!');</script>";
+            //   }
+            // if($role = "teacher"){
+            //   header('Location:teacher_dash.html');
+            // }
+            // else if($role = "student"){
+            //   header('Location:student_dash.html');
+            // }
+            
+          }
+          
+          
+
+          // if($role = "student"  && $name && $email && $pass ){
+          //     echo "<script>alert('Choosed student');</script>";
+
+          //     if(mysqli_query($GLOBALS['con'],$sql)){
+          //       echo "<script>alert('Student Registration Success!');</script>";
+  
+          //     }
+          //     else{
+          //       echo "<script>alert('Insert error!');</script>";
+  
+          //     }
+          // }
+          else{
+             echo "<script>alert('Empty!');</script>";
+          }
+        }
+
+
+
+          function checkinput($value){
+              $inputvalue = mysqli_real_escape_string($GLOBALS['con'],trim($_POST[$value]));
+              if(empty($inputvalue)){
+                return false;
+              }
+              else{
+                return $inputvalue;
+              }
+          }
+          
+        
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,16 +121,16 @@
         </div>
         <div class="col-md-6 bg-light rounded py-5 px-5 " style="box-shadow: 0px 0px 20px 0px #676767;">
         
-                <form action="admin_dash.php"method="post">
+                <form action="signup.php"method="post">
                   <div class="row">
                     <div class="col-6">
                       <div class="mb-3">
                         <label for="" class="form-label">Choose One</label>
-                        <select  class="form-select" aria-label="Default select example" required>
+                        <select name="role"  class="form-select" aria-label="Default select example" required>
 
-                          <option value=""></option>
-                          <option value="teacher">Teacher</option>
-                          <option value="student">Student</option>
+                        <option value="" disabled selected>Choose option</option>
+                          <option name="teacher" value="teacher">Teacher</option>
+                          <option name="student" value="student">Student</option>
                         </select>
                       </div>
                     

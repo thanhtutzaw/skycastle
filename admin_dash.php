@@ -1,8 +1,15 @@
-<?php 
+<?php include_once 'db.php';
+            createDB();
         if(isset($_POST['submit'])){
+            $role = $_POST['role'];
             $name = $_POST['name'];
+            $pass = $_POST['pass'];
+            
+            
 
-           echo "<script>alert('echo $name;');</script>";
+        //    echo "<script>alert('Role: $role');</script>";
+        //    echo "<script>alert('Name: $name');</script>";
+        //    echo "<script>alert('Pass: $pass');</script>";
         }
 ?> 
 <!DOCTYPE html>
@@ -99,7 +106,7 @@
                                                 <tr>
                                                     <th scope="row">1</th>
                                                     <td><?php echo $name; ?></td>
-                                                    <td>2222</td>
+                                                    <td><?php echo $pass; ?></td>
                                                     
                                                     <td><?php trashicon(); ?></td>
                                                 </tr>
