@@ -1,10 +1,12 @@
 <?php 
+
+	
 	
 	function createDB(){
-		$server = "localhost";
-		$user = "root";
-		$password = "";
-		$dbname = "skycastle";
+		$server = "den1.mysql1.gear.host";
+		$user = "account7";
+		$password = "Ha3N95q0?!5i";
+		$dbname = "account7";
 
 		// create connection
 		$con = mysqli_connect($server,$user,$password);
@@ -18,11 +20,14 @@
 		// process state
 		if(mysqli_query($con,$sql)){ //table create
 			$con = mysqli_connect($server,$user,$password,$dbname);
-			$sql = "create table if not exists scuser(
+			$sql = "create table if not exists account7(
 				id int(3) not null auto_increment primary key,
 				role varchar(25) not null,
+				name varchar(25) not null,
 				email varchar(25) not null,
-				pass varchar(25) not null
+				pass varchar(25) not null,
+				phone varchar(25) not null,
+				address varchar(25)
 
 
 		)";

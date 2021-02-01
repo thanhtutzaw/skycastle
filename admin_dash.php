@@ -1,17 +1,20 @@
-<?php include_once 'db.php';
-            createDB();
-        if(isset($_POST['submit'])){
-            $role = $_POST['role'];
-            $name = $_POST['name'];
-            $pass = $_POST['pass'];
-            
-            
+<?php 
 
-        //    echo "<script>alert('Role: $role');</script>";
-        //    echo "<script>alert('Name: $name');</script>";
-        //    echo "<script>alert('Pass: $pass');</script>";
-        }
-?> 
+include_once 'db.php';
+$con = createDB();
+
+function getData(){
+    $sql = "select * from account7";
+    $result = mysqli_query($GLOBALS['con'],$sql);
+
+    if(mysqli_num_rows($result) > 0){
+        return $result;
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +54,10 @@
                     <div class="profile mt-3">
                         <img class="noselect" src="images/clipart3191274.png" alt="Admin Profile" width="50px">
                         <p class="noselect admintext d-inline-block text-uppercase h5 text-light">Admin</p>
+                        
                     </div>
+
+                    <div class="mt-5 btn btn-danger text-light" onclick="alert('logout button');">Logout</div>
                     <div>
                         
                     </div>
@@ -59,11 +65,12 @@
             
             <div class="bg-light col-10">
                 <div class="container my-5">
+                    <div class="mb-3 dashboardtext">
+                            Dashboard
+                    </div>
                     <div class="row">
 
-                        <div class="text-3 mb-3 dashboardtext">
-                            Dashboard
-                        </div>
+                        
 
                         <div class="col-4">
                             
@@ -82,8 +89,9 @@
                                                 <th scope="row">1</th>
                                                 <td>Admin(You)</td>
                                                 <td>1111</td>
-                                                <td>  
-                                                <?php trashicon(); ?>
+                                                <td>
+                                                    <form action="admin_dash.php" method="post"> 
+                                                <?php trashicon(); ?></form>
                                                 </td>
                                                 </tr>
                                                 
@@ -95,70 +103,41 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">#</th>
-                                                    <th scope="col">Teacher</th>
+                                                    <th scope="col">role</th>
+                                                    <th scope="col">name</th>
+                                                    <th scope="col">email</th>
                                                     <th scope="col">password</th>
+                                                    <th scope="col">phone</th>
+                                                    <th scope="col">address</th>
                                                     
                                                     <th scope="col">Action</th>
                                                     <!-- <th scope="col">Handle</th> -->
                                                 </tr>
                                             </thead>
+
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td><?php echo $name; ?></td>
-                                                    <td><?php echo $pass; ?></td>
-                                                    
-                                                    <td><?php trashicon(); ?></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Teacher 2</td>
-                                                    <td>No</td>
-                                                    
-                                                    <td><?php trashicon(); ?></td>
-                                                </tr>
-                                                
-                                            </tbody>
+                                                    <?php
+
+                                                        $result = getData();
+                                                        if($result){
+                                                            while($row = mysqli_fetch_assoc($result)){ ?>
+                                                                <tr>
+                                                                    <td><?php echo $row['id'];?></td>
+                                                                    <td><?php echo $row['role'];?></td>
+                                                                    <td><?php echo $row['name'];?></td>
+                                                                    <td><?php echo $row['email'];?></td>
+                                                                    <td><?php echo $row['pass'];?></td>
+                                                                    <td><?php echo $row['phone'];?></td>
+                                                                    <td><?php echo $row['address'];?></td>
+                                                                    <td><?php trashicon(); ?></td>
+                                                                </tr>  
+                                                                    <?php  }
+                                                                }
+                                                    ?>
+                                            </tbody> 
                             </table>
                         </div>
-                        <div class="col-4">
-                            <table style="box-shadow: 2px 2px 12px 0px #0000004d;"  class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Student</th>
-                                                <th scope="col">password</th>
-                                                
-                                                <th scope="col">Action</th>
-                                                <!-- <th scope="col">Handle</th> -->
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Student</td>
-                                                    <td>3333</td>
-                                                    
-                                                    <td><?php trashicon(); ?></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Student2</td>
-                                                    <td>No</td>
-                                                    
-                                                    <td><?php trashicon(); ?></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Student3</td>
-                                                    <td>No</td>
-                                                    
-                                                    <td><?php trashicon(); ?></td>
-                                                </tr>
-                                                
-                                            </tbody>
-                            </table>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -181,9 +160,10 @@
             <path fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'/>";
             
             $trashicon = "
-            <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' class='trashicon text-danger bi bi-trash viewBox='0 0 16 16'>
+            <div class='btn' name='delete' title='Delete'>
+            <svg xmlns='http://www.w3.org/2000/svg' onclick='alert('hi');' title='Delete' width='20' height='20' fill='currentColor' class='trashicon text-danger bi bi-trash viewBox='0 0 16 16'>
   $trash; // change here 
-</svg>
+</svg></div>
             ";
             echo $trashicon ;
         }

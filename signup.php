@@ -13,11 +13,13 @@
             $name = checkinput('name');
             $email = checkinput('email');
             $pass = checkinput('pass');
+            $phone = checkinput('phone');
+            $address = checkinput('address');
 
-          if($role && $name && $email && $pass ){
+          if($role && $name && $email && $pass && $phone && $address ){
             $sql = "
-            insert into scuser(role,name,email,pass)
-            values('$role','$name','$email','$pass')
+            insert into account7(role,name,email,pass,phone,address)
+            values('$role','$name','$email','$pass','$phone','$address')
             
             ";
 
@@ -26,17 +28,25 @@
                 echo "<script>alert('Registration Success!');</script>";
                 if($role == "teacher"){
                   echo "<script>alert('Choosed Teacher');</script>";
-                  header('Location:teacher_dash 111.html');
+                  // header('Location:teacher_dash 111.html');
                 }
                 else{
                   echo "<script>alert('Choosed Student');</script>";
-                  header('Location:student_dash.html');
+                  // header('Location:student_dash.html');
                   
                 }
 
             }
             else{
-              echo "<script>alert('Insert error!');</script>";
+              
+              $error = mysqli_error($GLOBALS['con']);
+              if(!empty($error)){
+                echo "<script>alert('Email Already Exists.');</script>";
+              }else{
+                echo "<script>alert('Insert error!');</script>";
+              }
+              
+
 
             }
             // else (mysqli_query($GLOBALS['con'],$sql) && $role = "student"){
@@ -81,18 +91,17 @@
                 return $inputvalue;
               }
           }
-          
-        
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Sky Castle</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <!-- bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <style>
       @media only screen and (max-width: 768px) {
@@ -141,7 +150,7 @@
                     </div>
                     <div class="mb-3">
                       <label for="" class="form-label">Phone</label>
-                      <input placeholder="Phone" name="pass" required type="tel" class="form-control" id="exampleInputPhone">
+                      <input placeholder="Phone" name="phone" required type="tel" class="form-control" id="exampleInputPhone">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Address</label>
