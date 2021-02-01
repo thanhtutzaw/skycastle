@@ -24,7 +24,7 @@
 				id int(3) not null auto_increment primary key,
 				role varchar(25) not null,
 				name varchar(25) not null,
-				email varchar(25) not null,
+				email varchar(25) not null unique,
 				pass varchar(25) not null,
 				phone varchar(25) not null,
 				address varchar(25)
