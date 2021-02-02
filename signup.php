@@ -15,11 +15,12 @@
             $pass = checkinput('pass');
             $phone = checkinput('phone');
             $address = checkinput('address');
+            $dob = checkinput('dob');
 
-          if($role && $name && $email && $pass && $phone && $address ){
+          if($role && $name && $email && $pass && $phone && $address && $dob ){
             $sql = "
-            insert into account7(role,name,email,pass,phone,address)
-            values('$role','$name','$email','$pass','$phone','$address')
+            insert into account7(role,name,email,pass,phone,address,dob)
+            values('$role','$name','$email','$pass','$phone','$address','$dob')
             
             ";
 
@@ -182,7 +183,7 @@
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
                       <div class='input-group date' id='datetimepicker1'>
-                        <input type='date' class="form-control" />
+                        <input type='date' name="dob" class="form-control" />
                         <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                         </span>

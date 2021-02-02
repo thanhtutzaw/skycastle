@@ -57,7 +57,7 @@ function getData(){
                         
                     </div>
 
-                    <div class="mt-5 btn btn-danger text-light" onclick="alert('logout button');">Logout</div>
+                    <div class="mt-5 btn btn-danger text-light" onclick="alert('Logout Success');"><a style="text-decoration:none; color:white;" href="logout.php?logout">Logout</a></div>
                     <div>
                         
                     </div>
@@ -109,6 +109,7 @@ function getData(){
                                                     <th scope="col">password</th>
                                                     <th scope="col">phone</th>
                                                     <th scope="col">address</th>
+                                                    <th scope="col">dob</th>
                                                     
                                                     <th scope="col">Action</th>
                                                     <!-- <th scope="col">Handle</th> -->
@@ -129,6 +130,7 @@ function getData(){
                                                                     <td><?php echo $row['pass'];?></td>
                                                                     <td><?php echo $row['phone'];?></td>
                                                                     <td><?php echo $row['address'];?></td>
+                                                                    <td><?php echo $row['dob'];?></td>
                                                                     <td><?php trashicon(); ?></td>
                                                                 </tr>  
                                                                     <?php  }

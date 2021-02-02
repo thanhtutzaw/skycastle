@@ -27,7 +27,8 @@
 				email varchar(25) not null unique,
 				pass varchar(25) not null,
 				phone varchar(25) not null,
-				address varchar(25)
+				address varchar(25),
+				dob varchar(30)
 
 
 		)";
