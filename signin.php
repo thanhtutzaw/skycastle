@@ -1,70 +1,66 @@
-<?php
-    $_POST['email'] = "";
-    $_POST['pass'] = "";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sky Castle</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Form</title>
+	<link rel="stylesheet" href="library/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="library/fontawesome/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container bg-primary ">
-    <table class="table table-bordered">
-      <tbody>
-        <tr>
-          <td>admin</td>
-          <td>1111</td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>teacher</td>
-          <td>2222</td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>student</td>
-          <td>3333</td>
-        </tr>
-      </tbody>
-    </table>
-    <h2 class="text-light text-center mt-3 mb-5">Sign In</h2>
-      <div class="row mt-5">
-        <div class="text-center text-light col-md-6">Image or something</div>
-        <div class="bg-warning rounded py-5 px-5 col-md-6">
-                <form action="signincontrol.php"method="post">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input value="<?php echo$_POST['email'];?>"  name="email" required type="text" class="w-50 form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+	<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                    <div class="row"> <img src="images/logo.png" class="logo"> </div>
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="images/login-phpto.jpg" class="image"> </div>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input value="<?php echo$_POST['pass'];?>"  name="pass" required type="password" class="w-50 form-control" id="exampleInputPassword1">
+            </div>
+            <div class="col-lg-4">
+                <div class="card2 card border-0 px-4 py-5">
+                    <div class="row mb-4 px-3">
+                        <h2 class="card-title text-center">Login</h2>                    
+                    </div>
+                    <div class="row px-3"> <label class="mb-1">
+                            <h6 class="mb-0 text-sm">Email Address</h6>
+                        </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address"> </div>
+                    <div class="row px-3"> <label class="mb-1">
+                            <h6 class="mb-0 text-sm">Password</h6>
+                        </label> <input type="password" name="password" placeholder="Enter password"> </div>
+                    <div class="row px-3 mb-4">
+                        <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm text-danger font-weight-bold">Forgot Password?</a>
+                    </div>
+                    <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center">Login</button> </div>
+                    <hr class="my-4">
+                 <!--	<button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              		<button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>    
+                    -->
                 </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                <a href="signup.php" class="text-muted" style="text-decoration: none;">Creat Account</a>
-              </form>
+            </div>
         </div>
-      </div>
-       
+        <div class="bg-blue py-4">
+            <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2021. All rights reserved.</small>
+                <div class="social-contact ml-4 ml-sm-auto"> <span class="fab fa-facebook-f mr-4 text-lg"></span> <span class="fab fa-google-plus mr-4 text-lg"></span> <span class="fab fa-linkedin mr-4 text-lg"></span> <span class="fab fa-twitter mr-4 mr-sm-5 text-lg"></span> </div>
+            </div>
+        </div>
+    </div>
+</div>
+              
 
 
-  </div>
 
-   
 
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<script src="library/bootstrap/jquery-3.5.1.slim.min.js"></script>
+	<script src="library/bootstrap/popper.min.js"></script>
+	<script src="library/bootstrap/bootstrap.min.js"></script>
+	<script src="library/fontawesome/fontawesome-all.min.css"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
+
+<!-- bootstrap.css
+jquery.js
+popper.js
+bootstrap.js -->
