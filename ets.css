@@ -1,0 +1,74 @@
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	background-color: white;
+}
+
+/*navbar section*/
+.sidebar{
+	background-color: skyblue;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+.font-me{
+	font-family: 'Merriweather', serif;
+}
+.font-no{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+.font-size-40{
+	font-size: 40px;
+}
+.font-size-30{
+	font-size: 30px;
+}
+
+.siderbar-link{
+	transition: all .4s;
+}
+.sidebar-link:hover{
+	background: pink;
+	border-radius: 5px;
+}
+.current{
+	background-color: pink;
+	border-radius: 7px;
+	box-shadow: 2px 5px 10px white;
+	transition: all .3s;
+}
+.current:hover{
+	background: pink;
+	border-radius: 7px;
+	box-shadow: 2px 5px 20px pink;
+	transform: translateY(-1px);
+}
+.search-input{
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid pink;
+	transition: all .4s;
+}
+.search-input:focus{
+	background: transparent;
+	box-shadow: none;
+	border-bottom: 2px solid #dc3545;
+}
+.search-button{
+	background: pink;
+	border-radius: 50%;
+	padding: 5px 10px;
+	transition: all .4s;
+}
+.search-button:hover{
+	background: #eee;
+	transform: translateY(-1px);
+}
+.card-common{
+	box-shadow: 1px 2px 5px #999;
+	transition: all .4s;
+}
+.card-common:hover{
+	box-shadow: 2px 3px 15px #999;
+	transform: translateY(-1px);
