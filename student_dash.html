@@ -1,29 +1,233 @@
-<!-- <?php 
-        echo "<script> alert('Student Login success') ;</script>"; 
-
- 
-
-?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <!-- bootstrap -->
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mmn library/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="mmn css/style.css">
+  <title>Student Dashboard</title>
 </head>
 <body>
-    <h1 class="text-success">Student Dashboard</h1>
+  <!-- sidebar section -->
 
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-2 col-lg-3 sidebar fixed-top">
+              <div class="teacher-info border-bottom py-3">
+                <img src="mmn images/teacher.jpg" alt="" width="60" class="rounded-circle mr-3">
+                <a href="#" class="text-white mr-3 font-me font-size-30">Dashboard</a>
+              </div>
+              <ul class="navbar-nav flex-column">
+                <li class="nav-item my-2"><a href="#" class="nav-link text-white current"><i class="fas fa-home mr-4"></i>Classes</a></li>
+                <li class="nav-item my-2"><a href="" class="nav-link text-white sidebar-link"><i class="fas fa-user text-light fa-lg mr-4"></i>Assignment Library</a></li>
+                <li class="nav-item my-2"><a href="" class="nav-link text-white sidebar-link"><i class="fas fa-envelope text-light fa-lg mr-4"></i>Report</a></li>
+                <li class="nav-item my-2"><a href="" class="nav-link text-white sidebar-link"><i class="fas fa-school text-light fa-lg mr-3"></i>Notification</a></li>
+                <li class="nav-item my-2"><a href="" class="nav-link text-white sidebar-link"><i class="fas fa-book fa-lg mr-3"></i> Log in</a></li>
+                <li class="nav-item my-2"><a href="" class="nav-link text-white sidebar-link"><i class="fas fa-sign-out-alt text-light fa-lg mr-3"></i>Logout</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-10 col-lg-9 bg-white fixed-top ml-auto top-navbar">
+              <div class="row">
+                <div class="col-md-6 py-3">
+                  <form>
+                    <div class="input-group">
+                      <input type="search" class="form-control search-input mr-3" placeholder="Search...">
+                      <button class="btn search-button"><i class="fas fa-search text-secondary"></i></button>
+                    </div>
+                  </form>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!--dashboard section-->
+    <section id="statistics">
+      <div class="row mt-lg-5">
+        <div class="col-xl-10 col-lg-9 ml-auto">
+          <div class="card card-common">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <i class="fas fa-book fa-3x text-info"></i>
+                <div class="text-right text-secondary">
 
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <div class="container-fluid">
+        <div class="icon">
+       
 
+        </div>*/
 
-    
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+         <nav id="home" class="navbar navbar-expand-lg navbar-light">
+            <!-- main logo -->
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="mmn images/icon/29.png" alt="GymTube" title="GymTube" class="logo img-fluid width-25"> -->
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              
+
+            <div class="collapse navbar-collapse" id="main-navigation">
+              <div class="mr-auto"></div>
+                <ul class="navbar-nav mx-3 mt-2 mt-lg-0 ">
+
+                          <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                          </li>                      
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="index.html">Join</a>
+                          </li>                 
+                          <li class="nav-item">
+                            <a class="nav-link" href="index.html">Contact</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="index.html" >About</a>
+                          </li>
+                </ul>
+
+            <!-- courser -->
+              <div class="row px-3">
+                    <div class="col-sm-3 my-3">
+                          <div class="card">
+                            <img class="card-img-top"  src="mmn images/english1.jpg" alt="english">
+                              <div class="card-body">
+                              <h5 class="card-title">English</h5>       
+                              <a href="" class="btn btn-primary">Enter</a>
+                            </div>
+                          </div>
+                    </div>
+                   
+                    <div class="col-sm-3 my-3">
+                        <div class="card">
+                          <img class="card-img-top"  src="mmn images/maths.jpg" alt="maths">
+                          <div class="card-body">
+                            <h5 class="card-title">Mathematics</h5>
+                            <a href="" class="btn btn-primary">Enter</a>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 my-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/physics1.jpg" alt="physics">
+                          <div class="card-body">
+                          <h5 class="card-title">Physics</h5>
+                          <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3 my-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/zoology1.jpg" alt="zoology">
+                        <div class="card-body" id="arm">
+                          <h5 class="card-title">Zoology</h5>
+                           <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 my-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/botany1.jpg" alt="botany">
+                        <div class="card-body" id="arm">
+                          <h5 class="card-title">Botany</h5>
+                           <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 my-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/microbiology1.jpg" alt="microbiology">
+                        <div class="card-body" id="back">
+                          <h5 class="card-title">Microbiology</h5>
+                          <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3 my-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/Science1.jpg"  alt="science">
+                        <div class="card-body" id="science">
+                          <h5 class="card-title">Science</h5>
+                          <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3 my-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/laws1.jpg" alt="laws">
+                        <div class="card-body" id="laws">
+                          <h5 class="card-title">Laws</h5>
+                          <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3 my-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/psychology1.jpg" alt="psychology">
+                        <div class="card-body" id="psychology">
+                          <h5 class="card-title">Psychology</h5>
+                          <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/geology1.jpg" alt="geology">
+                        <div class="card-body" id="geology">
+                          <h5 class="card-title">Geology</h5>
+                           <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/history1.jpg" alt="history">
+                        <div class="card-body" id="history">
+                          <h5 class="card-title">History</h5>
+                           <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <img class="card-img-top"  src="mmn images/seemore1.jpg" alt="seemore">
+                        <div class="card-body" id="seemore">
+                          <h5 class="card-title">See More</h5>
+                           <a href="" class="btn btn-primary">Enter</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+      </div>        
+          </nav>
+  </div>  
+
+ 
+
+<script src="mmn library/bootstrap/jquery-3.4.1.slim.min.js"></script>
+<script src="mmn library/bootstrap/popper.min.js"></script>
+<script src="mmn library/bootstrap/bootstrap.min.js"></script>
+<script src="mmn js/"></script>          
 </body>
 </html>

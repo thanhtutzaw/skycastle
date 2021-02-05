@@ -1,0 +1,199 @@
+     
+	}
+	.logo:hover{
+		border:2px solid rgb(0,0,0,0);
+	}
+    .main-navigation{
+    	margin-right: 100px;
+       
+    }
+
+
+	.icon ul{
+		margin-top:10rem;
+		list-style: none;
+		color:orange;
+		line-height: 90px;
+		position: fixed;
+		margin-right:20px;
+		z-index: 20;
+		background: transparent !important;
+		animation-name: animation;
+		animation-duration: 2s;
+		animation-delay: 4s;
+		transition: all .5s ease-in-out;
+	}
+	@keyframes animation {
+		0%   {background-color:red; left:0px; }
+	  25%  {background-color:yellow; left:20px; }
+	  50%  {background-color:blue; left:20px; }
+	  75%  {background-color:green; left:0px; }
+	  100% {background-color:red; left:0px; }
+	}
+	 .icon .hide{
+
+	 	right:-720px;
+		opacity: 0;
+
+	}
+	@media only screen and (min-width: 768px) {
+		.sideicon{
+			display: block !important;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.sideicon{
+			display:none !important;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.navbar-collapse{
+			background-color: rgba(0,0,0,0.6);
+
+		}
+		.nav-link{
+			color:white !important;
+		}
+	}
+
+
+	p,h5{
+		cursor:default;
+	}
+	.nav-link:hover{
+		transition: all .8s ease-out;
+		border:3px solid orange;
+	}
+	.navbar{
+		position: absolute;
+		width:100%;
+		z-index: 10;
+		background: transparent !important;
+	}
+	.carousel-indicators{
+		cursor: pointer;
+		position: absolute;
+		height:50px;
+		width:80px;	
+		margin:auto;
+		bottom:893px;
+		opacity: 0.4;
+	}
+	.carousel-indicators:hover{
+		position: absolute;	
+		opacity: 1;
+	}
+	.carousel-caption{
+		position: absolute;
+		top:50px;
+	}
+	.orangetime{
+		font-size:1.6rem;
+		cursor:default;
+		width:100%;
+		height:110px;
+		background-color: orange;
+	}
+	.other{
+		width:100%;
+		height:100vh;
+		background-color: white;
+	}
+	#awaken{
+		width:40px;
+	}
+	.borderless td, .borderless th {
+		padding-top:3px;
+	    border: none !important;
+	}
+	.table td, .table th {
+		padding:0 !important;
+	}
+	/*table{
+		position: absolute;
+		top:5px;
+	}*/
+	/*.image{
+		width:100%;
+		height:100px;
+		background-size: cover;
+		background:url(../images/Yoga_Boy/cristian-baron-0-hB59n1m94-unsplash.jpg);
+	}
+*/
+	/*.modal-content{
+		left:0px;
+		width:130%;
+	}
+*/
+
+@media screen and (min-width: 768px) {
+		.modal-content{
+		left:-77px;
+		width:130%;
+	}
+
+
+}
+
+/*navbar section*/
+.sidebar{
+	background-color: gray;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+.font-me{
+	font-family: 'Merriweather', serif;
+}
+.font-no{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+.font-size-40{
+	font-size: 40px;
+}
+.font-size-30{
+	font-size: 30px;
+}
+
+.siderbar-link{
+	transition: all .4s;
+}
+.sidebar-link:hover{
+	background: purple;
+	border-radius: 5px;
+}
+.current{
+	background-color: purple;
+	border-radius: 7px;
+	box-shadow: 2px 5px 10px white;
+	transition: all .3s;
+}
+.current:hover{
+	background: purple;
+	border-radius: 7px;
+	box-shadow: 2px 5px 20px purple;
+	transform: translateY(-1px);
+}
+.search-input{
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid purple;
+	transition: all .4s;
+}
+.search-input:focus{
+	background: transparent;
+	box-shadow: none;
+	border-bottom: 2px solid #dc3545;
+}
+.search-button{
+	background: purple;
+	border-radius: 50%;
+	padding: 5px 10px;
+	transition: all .4s;
+}
+.search-button:hover{
+	background: #eee;
+	transform: translateY(-1px);
+}
