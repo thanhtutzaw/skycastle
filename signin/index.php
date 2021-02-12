@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="row mb-3 px-3"> <!-- login button -->
-                            <buttontype="submit" name="submit" class="login btn btn-blue text-light text-center">Login</buttontype=> 
+                            <button type="submit" name="submit" class="login btn btn-blue text-light text-center">Login</button> 
                         </div>
 
                         <hr class="my-4">
