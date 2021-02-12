@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Sign in control</title>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> to delete -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  <!-- sweet alert cdn -->
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>
 <body>
@@ -52,9 +51,10 @@ $inputpass = $_POST['pass'];
                     icon: 'error',
                     title: 'Oops...',
                     text: 'Log in fail!'
-                  });</script>";
-                // echo "<script> alert('Login Error !') ;</script>"; 
-                echo "<a href='signin.php'>Try Again</a>"; 
+                  });
+                  </script>";
+                
+                echo "<a href='signin'>Try Again</a>"; 
             }
         }
  

@@ -29,11 +29,11 @@ function getData(){
     <title>Sky Castle E-learning</title>
 	<link rel="shortcut icon" href="images/skycastle.png" type="image/x-icon" />
 
-    <p src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></p>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
       <!-- bootstrap -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="library/bootstrap/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         .noselect {
             -webkit-touch-callout: none; /* iOS Safari */
@@ -63,7 +63,8 @@ function getData(){
                         <img class="noselect" src="images/clipart3191274.png" alt="Admin Profile" width="50px">
                         <p class="noselect admintext d-inline-block text-uppercase h5 text-light">Admin</p>
                     </div>
-                    <div class="mt-5 btn btn-danger text-light" onclick="alert('Logout Success');"><a style="text-decoration:none; color:white;" href="logout.php?logout">Logout</a></div>
+                    <div class="mt-5 btn btn-danger text-light"><a id="#logout" style="text-decoration:none; color:white;">Logout</a></div>
+                    <!-- href="logout.php?logout" -->
                     <div> 
                     </div>
             </div>
@@ -167,12 +168,43 @@ function getData(){
 
 
 
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     
     <!-- bootstrap -->
+    <script>
+        $(document).ready(function(){
+           $('.btn-danger').click(function(){
+            Swal.fire({
+                    title: 'Are you sure to logout?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    // confirmButtonText: 'Yes,logout!'
+
+                    confirmButtonText: '<a style="text-decoration:none; color:white;" href="logout.php?logout">Yes, Logout!</a>'
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        // $('#logout'){
+                            
+                        // }
+                        // Swal.fire(
+                        // 'Deleted!',
+                        // 'Your file has been deleted.',
+                        // 'success'
+                        // )
+                    }
+                    })
+
+           })
+        })
+
+    </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
 <?php
