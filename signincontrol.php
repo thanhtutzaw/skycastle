@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in control</title>
-    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> to delete -->
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  <!-- sweet alert cdn -->
-
 
 </head>
 <body>

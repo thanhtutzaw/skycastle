@@ -125,7 +125,6 @@
               $formError = "
               <div class='container'>
               <h6 class='bg-danger text-light text-center rounded py-3'>Email already Exists!</h6></div>
-  
               ";
               echo $formError;
             }
@@ -141,12 +140,13 @@
             if(mysqli_query($GLOBALS['con'],$sql) ){
               
                 echo "<script>alert('Registration Success!');</script>";
+                header("Location:../signin");
                 if($role == "teacher"){
-                  echo "<script>alert('Choosed Teacher');</script>";
+                  // echo "<script>alert('Choosed Teacher');</script>";
                   // header('Location:teacher_dash 111.html');
                 }
                 else{
-                  echo "<script>alert('Choosed Student');</script>";
+                  // echo "<script>alert('Choosed Student');</script>";
                   // header('Location:student_dash.html');
                   
                 }
