@@ -1,6 +1,6 @@
 <?php 
 
-include_once 'db.php';
+include_once '../db.php';
 $con = createDB();
 
 if(isset($_GET['id'])){
@@ -27,13 +27,11 @@ function getData(){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Castle E-learning</title>
-	<link rel="shortcut icon" href="images/skycastle.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="../images/skycastle.png" type="image/x-icon" />
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
       <!-- bootstrap -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="library/bootstrap/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+
     <style>
         .noselect {
             -webkit-touch-callout: none; /* iOS Safari */
@@ -60,13 +58,15 @@ function getData(){
         <div class="row">
             <div class="bg-primary col-md-2">
                     <div class="profile mt-3">
-                        <img class="noselect" src="images/clipart3191274.png" alt="Admin Profile" width="50px">
+                        <img class="noselect" src="../images/clipart3191274.png" alt="Admin Profile" width="50px">
                         <p class="noselect admintext d-inline-block text-uppercase h5 text-light">Admin</p>
                     </div>
-                    <div class="mt-5 btn btn-danger text-light"><a id="#logout" style="text-decoration:none; color:white;">Logout</a></div>
-                    <!-- href="logout.php?logout" -->
-                    <div> 
-                    </div>
+
+                    <!-- logout button -->
+                    <div class="mt-5 btn btn-danger text-light">Logout</div>
+                    
+                    <!-- <div> 
+                    </div> -->
             </div>
             
                     
@@ -145,7 +145,7 @@ function getData(){
                                                                     <td><?php echo $row['address'];?></td>
                                                                     <td><?php echo $row['dob'];?></td>
                                                                     <td>
-                                                                        <img src="upload img/<?php echo $row['photo'] ?>" alt="" width="100px" height="100px">
+                                                                        <img src="../upload img/<?php echo $row['photo'] ?>" alt="" width="100px" height="100px">
 
 
                                                                         <!-- <img src='data:image;base64,".base64_encode($row['photo'])."' alt='Your photo'> -->
@@ -177,6 +177,7 @@ function getData(){
     <script>
         $(document).ready(function(){
            $('.btn-danger').click(function(){
+            //    alert('hi');
             Swal.fire({
                     title: 'Are you sure to logout?',
                     text: "You won't be able to revert this!",
@@ -184,24 +185,46 @@ function getData(){
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    // confirmButtonText: 'Yes,logout!'
-
-                    confirmButtonText: '<a style="text-decoration:none; color:white;" href="logout.php?logout">Yes, Logout!</a>'
-                    }).then((result) => {
-                    if (result.isConfirmed) {
-                        // $('#logout'){
-                            
-                        // }
-                        // Swal.fire(
-                        // 'Deleted!',
-                        // 'Your file has been deleted.',
-                        // 'success'
-                        // )
-                    }
-                    })
-
-           })
+                    confirmButtonText: 'Yes,logout!'
+            }).then(function() {
+                window.location = "../logout.php?logout";
+            });
+    })
         })
+            // Swal.fire({
+            //         title: 'Are you sure to logout?',
+            //         text: "You won't be able to revert this!",
+            //         icon: 'warning',
+            //         showCancelButton: true,
+            //         confirmButtonColor: '#3085d6',
+            //         cancelButtonColor: '#d33',
+            //         // confirmButtonText: 'Yes,logout!'
+
+            //         // confirmButtonText: '<a style="text-decoration:none; color:white;" href="logout.php?logout">Yes, Logout!</a>'
+            //         }).then(function() {
+            //         window.location = "logout.php?logout";
+            //         }) ;
+            //     }
+        
+
+        //                     Swal({
+    
+        // }).then(
+                    
+                    // dologout();
+                // );  
+                            
+     
+
+                            
+                        
+        //                 )
+
+        //    })
+                  //         Swal.fire({
+                                
+                    // })
+                    // confirmButtonText: 'Yes,logout!'     })
 
     </script>
     

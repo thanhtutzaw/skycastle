@@ -70,7 +70,7 @@ if(mysqli_num_rows($result) > 0){
             if($inputemail == $admin_email && $inputpass == $admin_pass){
                 // echo "<script> alert('Teacher Login success') ;</script>"; 
             //    echo "<script> alert('Admin Login success') ;</script>"; 
-               header('Location:../admin_dash.php');
+               header('Location:../admin');
             }
             else if($inputemail == $teacher_email && $inputpass == $teacher_pass) {
                 // echo "<script> alert('Teacher Login success') ;</script>"; 
@@ -100,6 +100,9 @@ if(mysqli_num_rows($result) > 0){
 
 
 ?>
+
+<!-- html start -->
+
 	<div class="container-fluid  mx-auto mt-4">
     <!-- px-1 px-md-5 px-lg-1 px-xl-5 py-5  -->
     <div class="card card0 border-0">
