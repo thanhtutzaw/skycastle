@@ -1,4 +1,4 @@
-# Skycastle E-Learning
+# Skycastle E-Learning Platform
 http://skycastle.epizy.com/
 
 Sky Castle E Learning Website (Metro 7WA School Project)
