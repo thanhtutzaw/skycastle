@@ -13,7 +13,7 @@ Coding Start - 2/2/2021
 
 Coding End - 18/2/2021
 
-! This project was stopped for some situation. New features are coming soon ...
+This project was stopped for some situation. New features are coming soon ...
 
 
 ### Team Members 
