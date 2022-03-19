@@ -1,6 +1,6 @@
 # Skycastle E-Learning Platform
 http://skycastle.epizy.com/
-This project was stopped for some situation. New features are coming soon ...
+This project was stopped for some reason. New features are coming soon ...
 
 Sky Castle E Learning Website (Metro 7WA School Project)
 
