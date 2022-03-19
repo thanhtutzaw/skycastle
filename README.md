@@ -1,5 +1,6 @@
 # Skycastle E-Learning Platform
 http://skycastle.epizy.com/
+This project was stopped for some situation. New features are coming soon ...
 
 Sky Castle E Learning Website (Metro 7WA School Project)
 
@@ -13,7 +14,7 @@ Coding Start - 2/2/2021
 
 Coding End - 18/2/2021
 
-This project was stopped for some situation. New features are coming soon ...
+
 
 
 ### Team Members 
